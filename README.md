@@ -1,4 +1,4 @@
-# This is a script to automate your backups on Google Drive cloud service. Please, read carefully these instructions before using it !
+# This is a script to automate your backups on Google Drive cloud service. Please, read these instructions carefully before using it !
 
 # REQUISITES TO MAKE THE SCRIPT WORK:
 
