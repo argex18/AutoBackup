@@ -76,14 +76,14 @@ class GoogleDrive:
                     resumable=True)
                 
                 if cls.drive_service.files().get(
-                    fileId='1OD3nVV-W-Ahty0Xu_K41Lt26b_WTSufJ').execute() == None:
+                    fileId=cls.search(folder)[0].get('id')).execute() == None:
                     if body.get('parents') != None:
                         body['parents'] = [
                             cls.create_folder(folder).get('id')
                         ]
                 else:
                     body['parents'] = [
-                        "1OD3nVV-W-Ahty0Xu_K41Lt26b_WTSufJ"
+                        cls.search(folder)[0].get('id')
                     ]
                 
                 upload = cls.drive_service.files().create(
